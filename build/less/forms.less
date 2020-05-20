@@ -17,10 +17,17 @@
     opacity: 1;
   }
 
+  & + span{
+    color: #666666;	
+  }
+
   &:not(select) {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+  }
+  textarea&{
+    width: 100% !important;	
   }
 }
 
@@ -55,7 +62,7 @@
 
   &.has-error {
     label {
-      color: @red;
+      color: @gray;
     }
     .form-control,
     .input-group-addon {
