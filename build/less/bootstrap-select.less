@@ -1,0 +1,46 @@
+/*Bootstap select*/
+
+// Import variables and mixins
+@import (reference) "../bootstrap-less/mixins";
+@import (reference) "../bootstrap-less/variables";
+@import (reference) "variables";
+@import (reference) "mixins";
+
+
+
+.bootstrap-select>.dropdown-toggle{	
+  .border-radius(@input-radius);	
+  box-shadow: none;	
+  border-color: @gray-lte;
+  &:focus {
+      border-color: @light-blue;
+      box-shadow: none;
+  }
+  text-transform: initial;	
+}
+
+.bootstrap-select>[data-style="btn-link"] + .dropdown-toggle {	
+  border: 0;	
+  padding: 0;	
+  width: auto;	
+  box-shadow: none !important;	
+  min-width: inherit;	
+  padding-right: 13px;	
+
+  & + button,
+  &:focus{
+    outline: none !important;	
+  }
+
+  & + .dropdown-menu {	
+    width: auto !important;	
+    min-width: auto !important;	
+  }	
+
+  & .filter-option{	
+    width: auto !important;
+    white-space: normal;
+  }
+}
+
+

@@ -176,3 +176,59 @@
 .btn-yahoo {
   .btn-social(#720e9e);
 }
+
+
+
+/*SOOOOOOOOCIAL*/
+
+#btn-states(btn-adn, '#b94630', '#d87a68');
+#btn-states(btn-bitbucket, '#0f253c', '#205081');
+#btn-states(btn-dropbox, '#0a568c', '#1087dd');
+#btn-states(btn-facebook, '#23345a', '#3b5998');
+#btn-states(btn-flickr, '#a80057', '#ff0084');
+#btn-states(btn-foursquare, '#e30742', '#f94877');
+#btn-states(btn-github, '#191919', '#444444');
+#btn-states(btn-google, '#a32b1c', '#dd4b39');
+#btn-states(btn-instagram, '#26455d', '#3f729b');
+#btn-states(btn-linkedin, '#00405f', '#007bb6');
+#btn-states(btn-microsoft, '#0f4bac', '#2672ec');
+#btn-states(btn-openid, '#b86607', '#f7931e');
+#btn-states(btn-pinterest, '#801419', '#cb2027');
+#btn-states(btn-reddit, '#98ccff', '#eff7ff');
+#btn-states(btn-soundcloud, '#a83800', '#ff5500');
+#btn-states(btn-tumblr, '#111c26', '#2c4762');
+#btn-states(btn-twitter, '#1583d7', '#55acee');
+#btn-states(btn-vimeo, '#0f7b9f', '#1ab7ea');
+#btn-states(btn-vk, '#3a526b', '#587ea3');
+#btn-states(btn-yahoo, '#39074e', '#720e9e');
+#btn-states(btn-yahoo, '#39074e', '#720e9e');
+
+#btn-states(@cn, @bg-c, @bg-c2){
+   .@{cn}:active:hover,
+   .@{cn}.active:hover,	
+   .open > .dropdown-toggle.@{cn}:hover,	
+   .@{cn}:active:focus,	
+   .@{cn}.active:focus,	
+   .open > .dropdown-toggle.@{cn}:focus,	
+   .@{cn}:active.focus,	
+   .@{cn}.active.focus,	
+   .open > .dropdown-toggle.@{cn}.focus {	
+     color: #fff;	
+     background-color: @bg-c;	
+     border-color: rgba(0, 0, 0, 0.2);	
+   }
+
+   .@{cn}.disabled:hover,	
+   .@{cn}[disabled]:hover,	
+   fieldset[disabled] .@{cn}:hover,	
+   .@{cn}.disabled:focus,	
+   .@{cn}[disabled]:focus,	
+   fieldset[disabled] .@{cn}:focus,	
+   .@{cn}.disabled.focus,	
+   .@{cn}[disabled].focus,	
+   fieldset[disabled] .@{cn}.focus {	
+     background-color: @bg-c2;	
+     border-color: rgba(0, 0, 0, 0.2);	
+   }
+}
+

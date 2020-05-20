@@ -23,6 +23,11 @@
   tr td .progress {
     margin-top: 5px;
   }
+
+  td a{
+    color: @gray;	
+    text-decoration: underline;	
+  }
 }
 
 //Bordered Table
@@ -69,3 +74,84 @@ table.text-center {
     text-align: right;
   }
 }
+
+/* DataTable */
+
+table.dataTable {
+  .select-checkbox{	
+    position: relative;	
+    min-width: 50px;	
+  }	
+
+  th.select-checkbox.selected:after {	
+    content: '\2714' !important;	
+    display: block !important;	
+  }	
+
+  td.select-checkbox{
+    &.selected:after {	
+      content: "✔";	
+      margin-top: -11px;	
+      margin-left: -4px;	
+      text-align: center;	
+      font-weight: normal;	
+      opacity: 1;	
+      text-shadow: 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;	
+    }	
+    &:before, &:before {	
+      content: ' ';	
+      margin-top: -6px;	
+      margin-left: -6px;	
+      border: 1px solid black;	
+      border-radius: 3px;	
+      display: block;	
+      position: absolute;	
+      top: 1.2em;	
+      left: 50%;	
+      width: 12px;	
+      height: 12px;	
+      box-sizing: border-box;	
+    }	
+  }
+
+  .icheckbox_minimal-blue {	
+    margin-right: 10px !important;	
+  }	
+
+  .badge {	
+    min-width: 50px;	
+    border-radius: 5px;	
+    font-weight: normal;	
+    box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.18);	
+  }	
+  
+}
+
+.dataTables_paginate.paging_simple_numbers {	
+  text-align: right;	
+}	
+
+.dataTables_filter input {	
+  margin-left: 10px;	
+}	
+
+.dataTable th:last-child:after{	
+display: none !important;	
+}	
+
+.panel-default>.panel-heading .dataTables_filter {	
+  float: right;	
+  margin-top: -4px;	
+
+  span{	
+    font-weight: 600;	
+  }
+}	
+
+@media (min-width: 992px){	
+	div#example1_filter {	
+	    position: absolute;	
+	    right: 13px;	
+	    top: -46px;	
+	}	
+}	
