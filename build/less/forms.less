@@ -72,6 +72,12 @@
     .help-block {
       color: @red;
     }
+
+    .form-control, 
+    .input-group-addon{
+      border-color: #d2d6de !important;	
+      background: #FFDCDC;	
+    }
   }
 }
 
@@ -97,6 +103,62 @@
   padding-left: 0;
 }
 
+/*Switcher*/
+
+.switcher-parent{	
+  width: 42px;	
+  height: 24px;	
+  position: relative;	
+  cursor: pointer;	
+  display: inline-block;	
+  vertical-align: middle;	
+
+  input{	
+    width: 100%;	
+    height: 100%;	
+    position: absolute;	
+    opacity: 0;	
+    z-index: 1;	
+    cursor: pointer;	
+  }	
+}	
+
+.switcher-parent{
+  cursor: pointer;
+  
+  label{
+    width: 100%;	
+    height: 100%;
+    background: #ccc;	
+    border-radius: 22px;	
+    cursor: pointer;	
+
+    &:before{
+      content: "";	
+      width: 20px;	
+      height: 20px;	
+      background: #fff;	
+      position: absolute;	
+      left: 2px;	
+      top: 2px;	
+      border-radius: 50%;	
+      transition: .5s;	
+      transform: translateX(0);	
+      -webkit-transform: translateX(0);	
+    }
+  }
+
+  input:checked + label{
+    background: #00A65A;	
+
+    &:before{	
+      transform: translateX(calc(100% - 2px));	
+      -webkit-transform: translateX(calc(100% - 2px));	
+    }	
+  }
+  
+}
+
 /* support Font Awesome icons in form-control */
 .form-control-feedback.fa {
   line-height: @input-height-base;
@@ -112,4 +174,15 @@
 .input-group-sm + .form-control-feedback.fa,
 .form-group-sm .form-control + .form-control-feedback.fa {
   line-height: @input-height-small;
+}
+
+
+/*Error message*/	
+.form-control + span.error-text {	
+  color: red;	
+  opacity: 0;	
+
+  &.active{
+    opacity: 1;	
+  }
 }

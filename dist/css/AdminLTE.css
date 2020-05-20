@@ -5017,6 +5017,7 @@ fieldset[disabled] .btn-yahoo.focus {
 
 .bootstrap-select [data-style="btn-link"] + .dropdown-toggle .filter-option{
   width: auto !important;
+  white-space: normal;
 }
 /*
  * Plugin: Full Calendar
