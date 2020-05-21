@@ -1,30 +1,74 @@
-// AdminLTE Gruntfile
+var serveStatic = require('serve-static');
+
 module.exports = function (grunt) { // jshint ignore:line
   'use strict';
 
+  var
+  LIVERELOAD_PORT = 35729,
+  lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
+  
+
   grunt.initConfig({
-    serve: {
-        options: {
-            port: 9000
-        }
-    },
     pkg   : grunt.file.readJSON('package.json'),
     watch : {
+      livereload:{
+        files: [
+          '{,*/}*.html',
+          'static/{,*/}*.{css,js,png,jpg,gif,svg}'
+        ],
+        tasks: ['jshint'],
+        options: {
+          livereload: LIVERELOAD_PORT
+        }
+      },
       less : {
         // Compiles less files upon saving
         files: ['build/less/*.less'],
-        tasks: ['less:development', 'less:production', 'replace', 'notify:less']
+        tasks: ['less:development', 'less:production', 'replace', 'notify:less'],
+        options: {
+          livereload: LIVERELOAD_PORT
+        }
       },
       js   : {
         // Compile js files upon saving
         files: ['build/js/*.js'],
-        tasks: ['js', 'notify:js']
+        tasks: ['js', 'notify:js'],
+        options: {
+          livereload: true,
+        },
       },
       skins: {
         // Compile any skin less files upon saving
         files: ['build/less/skins/*.less'],
-        tasks: ['less:skins', 'less:minifiedSkins', 'notify:less']
+        tasks: ['less:skins', 'less:minifiedSkins', 'notify:less'],
+        options: {
+          livereload: true,
+        },
+      },
+      html: {
+        files: ['dashboard.html','**/*.css'],
+        options: {
+            livereload: true
+        }
       }
+    },    
+    connect: {
+      livereload: {
+        options: {
+          middleware: function() {
+            return [
+              lrSnippet,
+              serveStatic('./', {'index': 'dashboard.html'}),
+            ];
+          }
+        }
+      }
+    },
+    open: {
+      dev : {
+        path: 'http://localhost:8000',
+        app: 'Google Chrome'
+      },
     },
     // Notify end of tasks
     notify: {
@@ -277,6 +321,7 @@ module.exports = function (grunt) { // jshint ignore:line
 
   // Load all grunt tasks
 
+
   // LESS Compiler
   grunt.loadNpmTasks('grunt-contrib-less');
   // Watch File Changes
@@ -303,7 +348,7 @@ module.exports = function (grunt) { // jshint ignore:line
   // Replace
   grunt.loadNpmTasks('grunt-text-replace');
 
-  grunt.loadNpmTasks('grunt-serve');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Linting task
   grunt.registerTask('lint', ['jshint', 'csslint', 'bootlint']);
@@ -311,7 +356,16 @@ module.exports = function (grunt) { // jshint ignore:line
   grunt.registerTask('js', ['concat', 'uglify']);
   // CSS Task
   grunt.registerTask('css', ['less:development', 'less:production', 'replace']);
+  grunt.loadNpmTasks('grunt-open');
+
+
 
   // The default task (running 'grunt' in console) is 'watch'
   grunt.registerTask('default', ['watch']);
+
+  grunt.registerTask('server',[
+    'connect:livereload',
+    'open:dev',
+    'watch'
+  ]);
 };
