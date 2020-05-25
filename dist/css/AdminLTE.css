@@ -5221,6 +5221,10 @@ fieldset[disabled] .btn-yahoo.focus {
 .margin {
   margin: 10px;
 }
+.margin-y-large {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 .margin-bottom {
   margin-bottom: 20px;
 }
