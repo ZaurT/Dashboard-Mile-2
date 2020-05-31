@@ -1,0 +1,355 @@
+extends ../head
+
+
+
+
+block content
+  .wrapper
+    include ../header
+    aside.main-sidebar
+      // sidebar: style can be found in sidebar.less
+      section.sidebar
+        // sidebar menu: : style can be found in sidebar.less
+        ul.sidebar-menu(data-widget='tree')
+          li
+            a(href='dashboard.html')
+              i.fa.fa-circle-o
+              span Dashboard
+        ul.sidebar-menu(data-widget='tree')
+          li.header FACEBOOK
+          li
+            a(href='fb_leads.html')
+              i.fa.fa-circle-o
+              span Leads
+          li
+            a(href='#')
+              i.fa.fa-circle-o
+              span Forms
+          li
+            a(href='fb_pages.html')
+              i.fa.fa-circle-o
+              span Pages
+        ul.sidebar-menu(data-widget='tree')
+          li.header &Vcy;&Kcy;&Ocy;&Ncy;&Tcy;&Acy;&Kcy;&Tcy;&IEcy;
+          li
+            a(href='vk_leads.html')
+              i.fa.fa-circle-o
+              span Leads
+          li
+            a(href='vk_forms.html')
+              i.fa.fa-circle-o
+              span Forms
+          li
+            a(href='vk_groups.html')
+              i.fa.fa-circle-o
+              span Groups
+        ul.sidebar-menu(data-widget='tree')
+          li.header WFP
+          li.active
+            a(href='wfp_leads.html')
+              i.fa.fa-circle-o
+              span Leads
+          li
+            a(href='wfp_forms.html')
+              i.fa.fa-circle-o
+              span Forms
+          li
+            a(href='wfp_campaigns.html')
+              i.fa.fa-circle-o
+              span Campaigns
+        ul.sidebar-menu(data-widget='tree')
+          li.header XML Receiver
+          li
+            a(href='xml_API.html')
+              i.fa.fa-circle-o
+              span API Token&rsquo;s
+          li
+            a(href='xml_logs.html')
+              i.fa.fa-circle-o
+              span Logs
+      .text-center.position-bottom
+        hr.margin-none
+        a.btn.btn-primary.margin-y-large(href='mailto:Aleksandr.Apuhtin@icnx.ru,Pavel.Gubanov@icnx.ru') Contact support
+      // /.sidebar
+    // Content Wrapper. Contains page content
+    .content-wrapper
+      // Content Header (Page header)
+      // Main content
+      section.content-header
+        h1
+          | Leads
+      section.content
+        .row
+          // left column
+          .col-md-12
+            .box.box-primary
+              .box-header.with-border
+                h3.box-title Filters
+              form(role='form')
+                // /.box-body
+                .box-body
+                  .row
+                    .col-lg-4
+                      .form-group
+                        label(for='exampleInputName') Campaign
+                        select.form-control.selectpicker
+                          option option 1
+                          option option 2
+                          option option 3
+                          option option 4
+                          option option 5
+                      .form-group
+                        label(for='exampleInputName') Source
+                        select.form-control.selectpicker
+                          option option 1
+                          option option 2
+                          option option 3
+                          option option 4
+                          option option 5
+                      .form-group
+                        label(for='exampleInputName') Car Model
+                        select.form-control.selectpicker
+                          option option 1
+                          option option 2
+                          option option 3
+                          option option 4
+                          option option 5
+                    .col-lg-4
+                      .form-group
+                        label(for='exampleInputName') Status
+                        select.form-control.selectpicker
+                          option option 1
+                          option option 2
+                          option option 3
+                          option option 4
+                          option option 5
+                      .form-group
+                        label(for='exampleInputName') Campaing Name
+                        select.form-control.selectpicker
+                          option option 1
+                          option option 2
+                          option option 3
+                          option option 4
+                          option option 5
+                      .form-group
+                        label(for='exampleInputName') Dealer ID
+                        input#InputComment1.form-control(type='text' placeholder='Enter Dealer ID')
+                    .col-lg-4
+                      .form-group
+                        label(for='exampleInputName') Type
+                        select.form-control.selectpicker
+                          option option 1
+                          option option 2
+                          option option 3
+                          option option 4
+                          option option 5
+                      .form-group
+                        label(for='exampleInputName') Car Brand
+                        select.form-control.selectpicker
+                          option option 1
+                          option option 2
+                          option option 3
+                          option option 4
+                          option option 5
+                .box-footer.text-right
+                  a.btn.btn-default(href='#' type='submit') Apply
+                  a.btn.btn-default(href='#' type='submit') Clear
+        .row
+          // left column
+          .col-md-12
+            .box.box-primary
+              .box-header.with-border
+                h3.box-title Actions
+              form(role='form')
+                // /.box-body
+                .box-footer.text-left
+                  a.btn.btn-default(href='#' type='submit') Resend
+                  a.btn.btn-danger(href='#' type='button' data-toggle='modal' data-target='#modal-default') Delete
+        .row
+          .col-md-12
+            .panel.panel-default.dataTables_wrapper
+              // Default panel contents
+              .panel-heading
+                h4 Campaing
+              // Table
+              div
+                // /.box-header
+                .box-body
+                  table#example1.table.table-bordered
+                    thead
+                      tr
+                        th #
+                        th Name
+                        th Phone
+                        th Email
+                        th Status
+                        th Created
+                        th.select-checkbox
+                    tbody
+                      tr
+                        td 109
+                        td &Pcy;&acy;&shcy;&acy; &Pcy;&iecy;&rcy;&vcy;&ycy;&jcy;
+                        td roman.tnv@yandex.ru
+                        td 9697659219
+                        td Idle
+                        td 2019-09-11 17:52:25
+                        td.select-checkbox
+                      tr
+                        td 108
+                        td &Dcy;&acy;&shcy;&acy; &Vcy;&tcy;&ocy;&rcy;&acy;&yacy;
+                        td roman.tnv@yandex.ru
+                        td 9697659219
+                        td Sent
+                        td 2019-09-11 17:52:25
+                        td.select-checkbox
+                      tr
+                        td 107
+                        td &Mcy;&acy;&shcy;&acy; &CHcy;&iecy;&tcy;&vcy;&iecy;&rcy;&tcy;&acy;&yacy;
+                        td roman.tnv@yandex.ru
+                        td 9697659219
+                        td.text-danger Error (2)
+                        td 2019-09-11 17:52:25
+                        td.select-checkbox
+                // /.box-body
+      // /.content
+    // /.content-wrapper
+    // Control Sidebar
+    aside.control-sidebar.control-sidebar-dark
+      // Create the tabs
+      ul.nav.nav-tabs.nav-justified.control-sidebar-tabs
+        li
+          a(href='#control-sidebar-home-tab' data-toggle='tab')
+            i.fa.fa-home
+        li
+          a(href='#control-sidebar-settings-tab' data-toggle='tab')
+            i.fa.fa-gears
+      // Tab panes
+      .tab-content
+        // Home tab content
+        #control-sidebar-home-tab.tab-pane
+          h3.control-sidebar-heading Recent Activity
+          ul.control-sidebar-menu
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-birthday-cake.bg-red
+                .menu-info
+                  h4.control-sidebar-subheading Langdon&apos;s Birthday
+                  p Will be 23 on April 24th
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-user.bg-yellow
+                .menu-info
+                  h4.control-sidebar-subheading Frodo Updated His Profile
+                  p New phone +1(800)555-1234
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-envelope-o.bg-light-blue
+                .menu-info
+                  h4.control-sidebar-subheading Nora Joined Mailing List
+                  p nora@example.com
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-file-code-o.bg-green
+                .menu-info
+                  h4.control-sidebar-subheading Cron Job 254 Executed
+                  p Execution time 5 seconds
+          // /.control-sidebar-menu
+          h3.control-sidebar-heading Tasks Progress
+          ul.control-sidebar-menu
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Custom Template Design
+                  span.label.label-danger.pull-right 70%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-danger(style='width: 70%')
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Update Resume
+                  span.label.label-success.pull-right 95%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-success(style='width: 95%')
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Laravel Integration
+                  span.label.label-warning.pull-right 50%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-warning(style='width: 50%')
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Back End Framework
+                  span.label.label-primary.pull-right 68%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-primary(style='width: 68%')
+          // /.control-sidebar-menu
+        // /.tab-pane
+        // Stats tab content
+        #control-sidebar-stats-tab.tab-pane Stats Tab Content
+        // /.tab-pane
+        // Settings tab content
+        #control-sidebar-settings-tab.tab-pane
+          form(method='post')
+            h3.control-sidebar-heading General Settings
+            .form-group
+              label.control-sidebar-subheading
+                | Report panel usage
+                input.pull-right(type='checkbox' checked='')
+              p
+                | Some information about this general settings option
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Allow mail redirect
+                input.pull-right(type='checkbox' checked='')
+              p
+                | Other sets of options are available
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Expose author name in posts
+                input.pull-right(type='checkbox' checked='')
+              p
+                | Allow the user to show his name in blog posts
+            // /.form-group
+            h3.control-sidebar-heading Chat Settings
+            .form-group
+              label.control-sidebar-subheading
+                | Show me as online
+                input.pull-right(type='checkbox' checked='')
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Turn off notifications
+                input.pull-right(type='checkbox')
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Delete chat history
+                a.text-red.pull-right(href='javascript:void(0)')
+                  i.fa.fa-trash-o
+            // /.form-group
+        // /.tab-pane
+    // /.control-sidebar
+    //
+      Add the sidebar's background. This div must be placed
+      immediately after the control sidebar
+    .control-sidebar-bg
+  // ./wrapper
+  #modal-default.modal.modal-mini.custom-modal.fade(style='display: none;')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          //
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span></button>
+          h4.modal-title Action confirmation
+        .modal-body
+          p Are you sure?
+        .modal-footer
+          button.btn.btn-danger.pull-left(type='button' data-dismiss='modal') Cancel
+          button.btn.btn-success(type='button') Submit
+      // /.modal-content
+    // /.modal-dialog

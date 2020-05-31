@@ -206,7 +206,23 @@ module.exports = function (grunt) { // jshint ignore:line
         dest: 'dist/js/adminlte.js'
       }
     },
-
+    // pug templates
+    pug: {
+      compile: {
+        options: {
+          data: {
+            debug: true
+          }
+        },
+        files: [{
+          expand: true,
+          cwd: 'build/pug/',
+          src: [ '*/*.pug' ],
+          dest: 'pages',
+          ext: '.html'
+        }, {"index.html": "build/pug/index.pug"}]
+      }
+    },
     // Replace image paths in AdminLTE without plugins
     replace: {
       withoutPlugins   : {
@@ -349,6 +365,8 @@ module.exports = function (grunt) { // jshint ignore:line
   grunt.loadNpmTasks('grunt-text-replace');
 
   grunt.loadNpmTasks('grunt-contrib-connect');
+
+  grunt.loadNpmTasks('grunt-contrib-pug');
 
   // Linting task
   grunt.registerTask('lint', ['jshint', 'csslint', 'bootlint']);

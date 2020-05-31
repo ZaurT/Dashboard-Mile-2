@@ -1,0 +1,268 @@
+extends ../head
+
+
+
+block content
+  .wrapper
+    include ../header
+    aside.main-sidebar
+      // sidebar: style can be found in sidebar.less
+      section.sidebar
+        ul.sidebar-menu(data-widget='tree')
+          li
+            a(href='dashboard.html')
+              i.fa.fa-circle-o
+              span Dashboard
+        ul.sidebar-menu(data-widget='tree')
+          li.header FACEBOOK
+          li
+            a(href='fb_leads.html')
+              i.fa.fa-circle-o
+              span Leads
+          li
+            a(href='#')
+              i.fa.fa-circle-o
+              span Forms
+          li
+            a(href='fb_pages.html')
+              i.fa.fa-circle-o
+              span Pages
+        ul.sidebar-menu(data-widget='tree')
+          li.header &Vcy;&Kcy;&Ocy;&Ncy;&Tcy;&Acy;&Kcy;&Tcy;&IEcy;
+          li
+            a(href='vk_leads.html')
+              i.fa.fa-circle-o
+              span Leads
+          li.active
+            a(href='vk_forms.html')
+              i.fa.fa-circle-o
+              span Forms
+          li
+            a(href='vk_groups.html')
+              i.fa.fa-circle-o
+              span Groups
+        ul.sidebar-menu(data-widget='tree')
+          li.header WFP
+          li
+            a(href='wfp_leads.html')
+              i.fa.fa-circle-o
+              span Leads
+          li
+            a(href='wfp_forms.html')
+              i.fa.fa-circle-o
+              span Forms
+          li
+            a(href='wfp_campaigns.html')
+              i.fa.fa-circle-o
+              span Campaigns
+        ul.sidebar-menu(data-widget='tree')
+          li.header XML Receiver
+          li
+            a(href='xml_API.html')
+              i.fa.fa-circle-o
+              span API Token&rsquo;s
+          li
+            a(href='xml_logs.html')
+              i.fa.fa-circle-o
+              span Logs
+      .text-center.position-bottom
+        hr.margin-none
+        a.btn.btn-primary.margin-y-large(href='mailto:Aleksandr.Apuhtin@icnx.ru,Pavel.Gubanov@icnx.ru') Contact support
+      // /.sidebar
+    // Content Wrapper. Contains page content
+    .content-wrapper
+      // Content Header (Page header)
+      // Main content
+      section.content-header
+        h1
+          | Add New Form
+      section.content
+        .row
+          .col-md-8
+            .panel.panel-default
+              // Default panel contents
+              .panel-heading
+                h4 Form Detailes
+              form(role='form')
+                .box-body
+                  .row
+                    .col-lg-6
+                      h3.box-title Form Defaults
+                      .row
+                        .col-lg-12
+                          .form-group
+                            label(for='exampleInputName') Form ID
+                            input.form-control(type='text' name='')
+                      .row
+                        .col-lg-12
+                          .form-group
+                            label(for='exampleInputGroupName') Group Name
+                            select.form-control.selectpicker(tabindex='-98')
+                              option All
+                              option option 1
+                              option option 2
+                              option option 3
+                              option option 4
+                              option option 5
+                      .row
+                        .col-lg-12
+                          .form-group
+                            label(for='exampleInputName') Type
+                            select.form-control.selectpicker(tabindex='-98')
+                              option All
+                              option option 1
+                              option option 2
+                              option option 3
+                              option option 4
+                              option option 5
+                      .row
+                        .col-lg-12
+                          .form-group
+                            label
+                              input.minimal(type='checkbox' checked='')
+                              |                                     Activate now
+                    .col-lg-6
+                      h3.box-title XML Settings
+                      .row
+                        .col-lg-12
+                          .form-group
+                            label(for='source') Source
+                            input#source.form-control(type='text' placeholder='Enter source')
+                        .col-lg-12
+                          .form-group
+                            label(for='source') Campaign Name
+                            input#source.form-control(type='text' placeholder='Enter campaign name')
+                        .col-lg-12
+                          .form-group
+                            label(for='brand') Car Brand
+                            input#brand.form-control(type='text' placeholder='Enter car brand')
+                        .col-lg-12
+                          .form-group
+                            label(for='model') Car Model
+                            input#model.form-control(type='text' placeholder='Enter car model')
+                // /.box-body
+                .box-footer.text-right
+                  a.btn.btn-default(href='campaigns.html' type='submit') Back
+                  a.btn.btn-success(href='campaigns.html' type='submit') Save
+      // /.content
+    // /.content-wrapper
+    // Control Sidebar
+    aside.control-sidebar.control-sidebar-dark
+      // Create the tabs
+      ul.nav.nav-tabs.nav-justified.control-sidebar-tabs
+        li
+          a(href='#control-sidebar-home-tab' data-toggle='tab')
+            i.fa.fa-home
+        li
+          a(href='#control-sidebar-settings-tab' data-toggle='tab')
+            i.fa.fa-gears
+      // Tab panes
+      .tab-content
+        // Home tab content
+        #control-sidebar-home-tab.tab-pane
+          h3.control-sidebar-heading Recent Activity
+          ul.control-sidebar-menu
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-birthday-cake.bg-red
+                .menu-info
+                  h4.control-sidebar-subheading Langdon&apos;s Birthday
+                  p Will be 23 on April 24th
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-user.bg-yellow
+                .menu-info
+                  h4.control-sidebar-subheading Frodo Updated His Profile
+                  p New phone +1(800)555-1234
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-envelope-o.bg-light-blue
+                .menu-info
+                  h4.control-sidebar-subheading Nora Joined Mailing List
+                  p nora@example.com
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-file-code-o.bg-green
+                .menu-info
+                  h4.control-sidebar-subheading Cron Job 254 Executed
+                  p Execution time 5 seconds
+          // /.control-sidebar-menu
+          h3.control-sidebar-heading Tasks Progress
+          ul.control-sidebar-menu
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Custom Template Design
+                  span.label.label-danger.pull-right 70%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-danger(style='width: 70%')
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Update Resume
+                  span.label.label-success.pull-right 95%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-success(style='width: 95%')
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Laravel Integration
+                  span.label.label-warning.pull-right 50%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-warning(style='width: 50%')
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Back End Framework
+                  span.label.label-primary.pull-right 68%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-primary(style='width: 68%')
+          // /.control-sidebar-menu
+        // /.tab-pane
+        // Stats tab content
+        #control-sidebar-stats-tab.tab-pane Stats Tab Content
+        // /.tab-pane
+        // Settings tab content
+        #control-sidebar-settings-tab.tab-pane
+          form(method='post')
+            h3.control-sidebar-heading General Settings
+            .form-group
+              label.control-sidebar-subheading
+                | Report panel usage
+                input.pull-right(type='checkbox' checked='')
+              p
+                | Some information about this general settings option
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Allow mail redirect
+                input.pull-right(type='checkbox' checked='')
+              p
+                | Other sets of options are available
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Expose author name in posts
+                input.pull-right(type='checkbox' checked='')
+              p
+                | Allow the user to show his name in blog posts
+            // /.form-group
+            h3.control-sidebar-heading Chat Settings
+            .form-group
+              label.control-sidebar-subheading
+                | Show me as online
+                input.pull-right(type='checkbox' checked='')
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Turn off notifications
+                input.pull-right(type='checkbox')
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Delete chat history
+                a.text-red.pull-right(href='javascript:void(0)')
+                  i.fa.fa-trash-o
+            // /.form-group
+        // /.tab-pane
+    .control-sidebar-bg

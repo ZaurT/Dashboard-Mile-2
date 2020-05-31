@@ -1,0 +1,270 @@
+extends ../head
+
+
+
+
+block content
+  .wrapper
+    include ../header
+    aside.main-sidebar
+      // sidebar: style can be found in sidebar.less
+      section.sidebar
+        ul.sidebar-menu(data-widget='tree')
+          li
+            a(href='dashboard.html')
+              i.fa.fa-circle-o
+              span Dashboard
+        ul.sidebar-menu(data-widget='tree')
+          li.header FACEBOOK
+          li
+            a(href='fb_leads.html')
+              i.fa.fa-circle-o
+              span Leads
+          li
+            a(href='fb_forms.html')
+              i.fa.fa-circle-o
+              span Forms
+          li
+            a(href='fb_pages.html')
+              i.fa.fa-circle-o
+              span Pages
+        ul.sidebar-menu(data-widget='tree')
+          li.header &Vcy;&Kcy;&Ocy;&Ncy;&Tcy;&Acy;&Kcy;&Tcy;&IEcy;
+          li
+            a(href='vk_leads.html')
+              i.fa.fa-circle-o
+              span Leads
+          li
+            a(href='vk_forms.html')
+              i.fa.fa-circle-o
+              span Forms
+          li.active
+            a(href='vk_groups.html')
+              i.fa.fa-circle-o
+              span Groups
+        ul.sidebar-menu(data-widget='tree')
+          li.header WFP
+          li
+            a(href='wfp_leads.html')
+              i.fa.fa-circle-o
+              span Leads
+          li
+            a(href='wfp_forms.html')
+              i.fa.fa-circle-o
+              span Forms
+          li
+            a(href='wfp_campaigns.html')
+              i.fa.fa-circle-o
+              span Campaigns
+        ul.sidebar-menu(data-widget='tree')
+          li.header XML Receiver
+          li
+            a(href='xml_API.html')
+              i.fa.fa-circle-o
+              span API Token&rsquo;s
+          li
+            a(href='xml_logs.html')
+              i.fa.fa-circle-o
+              span Logs
+      .text-center.position-bottom
+        hr.margin-none
+        a.btn.btn-primary.margin-y-large(href='mailto:Aleksandr.Apuhtin@icnx.ru,Pavel.Gubanov@icnx.ru') Contact support
+      // /.sidebar
+    // Content Wrapper. Contains page content
+    .content-wrapper
+      // Content Header (Page header)
+      // Main content
+      section.content-header
+        h1
+          | VKontakte Groups
+      section.content
+        .row
+          // left column
+          .col-md-12
+            .box.box-primary.collapsed-box
+              .box-header.with-border
+                h3.box-title Filters
+                .box-tools.pull-right
+                  button.btn.btn-box-tool(type='button' data-widget='collapse')
+                    i.fa.fa-plus
+              // /.box-body
+              .box-body(style='display: none;')
+                .row
+                  .col-lg-4
+                    .form-group(style='display: inline-block; margin-bottom: 0; vertical-align: bottom; width: calc(100% - 200px); margin-right: 15px;')
+                      label(for='exampleInputName') Group Name
+                      input#InputGroupName.form-control(type='text' placeholder='Enter Dealer ID')
+                    a.btn.btn-default.mr-15(href='#' type='submit' data-widget='collapse') Apply
+                    a.btn.btn-default(href='#' type='submit' data-widget='collapse') Clear
+        .row
+          .col-md-12
+            .box.box-primary
+              .box-header.with-border
+                h3.box-title Actions
+              .box-body
+                form(role='form')
+                  a.btn.btn-success.mr-15(href='vk_groups_add.html' type='submit') Add
+                  a.btn.btn-danger(href='#' type='button' data-toggle='modal' data-target='#modal-default') Delete
+        .row
+          .col-md-12
+            .panel.panel-default
+              // Default panel contents
+              .panel-heading
+                h4 Groups
+              // Table
+              table#example1.table
+                thead
+                  tr
+                    th Group ID
+                    th Group Name
+                    th(style='width: 80%;') Confirmation Code
+                    th.select-checkbox
+                tbody
+                  tr
+                    td
+                      | 158400126
+                    td MINI
+                    td EAAE***d0ZD
+                    td.select-checkbox
+      // /.content
+    // /.content-wrapper
+    // Control Sidebar
+    aside.control-sidebar.control-sidebar-dark
+      // Create the tabs
+      ul.nav.nav-tabs.nav-justified.control-sidebar-tabs
+        li
+          a(href='#control-sidebar-home-tab' data-toggle='tab')
+            i.fa.fa-home
+        li
+          a(href='#control-sidebar-settings-tab' data-toggle='tab')
+            i.fa.fa-gears
+      // Tab panes
+      .tab-content
+        // Home tab content
+        #control-sidebar-home-tab.tab-pane
+          h3.control-sidebar-heading Recent Activity
+          ul.control-sidebar-menu
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-birthday-cake.bg-red
+                .menu-info
+                  h4.control-sidebar-subheading Langdon&apos;s Birthday
+                  p Will be 23 on April 24th
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-user.bg-yellow
+                .menu-info
+                  h4.control-sidebar-subheading Frodo Updated His Profile
+                  p New phone +1(800)555-1234
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-envelope-o.bg-light-blue
+                .menu-info
+                  h4.control-sidebar-subheading Nora Joined Mailing List
+                  p nora@example.com
+            li
+              a(href='javascript:void(0)')
+                i.menu-icon.fa.fa-file-code-o.bg-green
+                .menu-info
+                  h4.control-sidebar-subheading Cron Job 254 Executed
+                  p Execution time 5 seconds
+          // /.control-sidebar-menu
+          h3.control-sidebar-heading Tasks Progress
+          ul.control-sidebar-menu
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Custom Template Design
+                  span.label.label-danger.pull-right 70%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-danger(style='width: 70%')
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Update Resume
+                  span.label.label-success.pull-right 95%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-success(style='width: 95%')
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Laravel Integration
+                  span.label.label-warning.pull-right 50%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-warning(style='width: 50%')
+            li
+              a(href='javascript:void(0)')
+                h4.control-sidebar-subheading
+                  | Back End Framework
+                  span.label.label-primary.pull-right 68%
+                .progress.progress-xxs
+                  .progress-bar.progress-bar-primary(style='width: 68%')
+          // /.control-sidebar-menu
+        // /.tab-pane
+        // Stats tab content
+        #control-sidebar-stats-tab.tab-pane Stats Tab Content
+        // /.tab-pane
+        // Settings tab content
+        #control-sidebar-settings-tab.tab-pane
+          form(method='post')
+            h3.control-sidebar-heading General Settings
+            .form-group
+              label.control-sidebar-subheading
+                | Report panel usage
+                input.pull-right(type='checkbox' checked='')
+              p
+                | Some information about this general settings option
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Allow mail redirect
+                input.pull-right(type='checkbox' checked='')
+              p
+                | Other sets of options are available
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Expose author name in posts
+                input.pull-right(type='checkbox' checked='')
+              p
+                | Allow the user to show his name in blog posts
+            // /.form-group
+            h3.control-sidebar-heading Chat Settings
+            .form-group
+              label.control-sidebar-subheading
+                | Show me as online
+                input.pull-right(type='checkbox' checked='')
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Turn off notifications
+                input.pull-right(type='checkbox')
+            // /.form-group
+            .form-group
+              label.control-sidebar-subheading
+                | Delete chat history
+                a.text-red.pull-right(href='javascript:void(0)')
+                  i.fa.fa-trash-o
+            // /.form-group
+        // /.tab-pane
+    // /.control-sidebar
+    //
+      Add the sidebar's background. This div must be placed
+      immediately after the control sidebar
+    .control-sidebar-bg
+  // ./wrapper
+  #modal-default.modal.modal-mini.custom-modal.fade(style='display: none;')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          //
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span></button>
+          h4.modal-title Action confirmation
+        .modal-body
+          p Are you sure?
+        .modal-footer
+          button.btn.btn-danger.pull-left(type='button' data-dismiss='modal') Cancel
+          button.btn.btn-success(type='button') Submit
+      // /.modal-content
+    // /.modal-dialog
