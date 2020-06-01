@@ -5,70 +5,7 @@ extends ../head
 block content
   .wrapper
     include ../header
-    aside.main-sidebar
-      // sidebar: style can be found in sidebar.less
-      section.sidebar
-        ul.sidebar-menu(data-widget='tree')
-          li
-            a(href='dashboard.html')
-              i.fa.fa-circle-o
-              span Dashboard
-        ul.sidebar-menu(data-widget='tree')
-          li.header FACEBOOK
-          li
-            a(href='fb_leads.html')
-              i.fa.fa-circle-o
-              span Leads
-          li
-            a(href='fb_forms.html')
-              i.fa.fa-circle-o
-              span Forms
-          li
-            a(href='fb_pages.html')
-              i.fa.fa-circle-o
-              span Pages
-        ul.sidebar-menu(data-widget='tree')
-          li.header &Vcy;&Kcy;&Ocy;&Ncy;&Tcy;&Acy;&Kcy;&Tcy;&IEcy;
-          li
-            a(href='vk_leads.html')
-              i.fa.fa-circle-o
-              span Leads
-          li
-            a(href='vk_forms.html')
-              i.fa.fa-circle-o
-              span Forms
-          li
-            a(href='vk_groups.html')
-              i.fa.fa-circle-o
-              span Groups
-        ul.sidebar-menu(data-widget='tree')
-          li.header WFP
-          li
-            a(href='wfp_leads.html')
-              i.fa.fa-circle-o
-              span Leads
-          li
-            a(href='wfp_forms.html')
-              i.fa.fa-circle-o
-              span Forms
-          li
-            a(href='wfp_campaigns.html')
-              i.fa.fa-circle-o
-              span Campaigns
-        ul.sidebar-menu(data-widget='tree')
-          li.header XML Receiver
-          li.active
-            a(href='xml_API.html')
-              i.fa.fa-circle-o
-              span API Token&rsquo;s
-          li
-            a(href='xml_logs.html')
-              i.fa.fa-circle-o
-              span Logs
-      .text-center.position-bottom
-        hr.margin-none
-        a.btn.btn-primary.margin-y-large(href='mailto:Aleksandr.Apuhtin@icnx.ru,Pavel.Gubanov@icnx.ru') Contact support
-      // /.sidebar
+    include ../sidebar
     // Content Wrapper. Contains page content
     .content-wrapper
       // Content Header (Page header)

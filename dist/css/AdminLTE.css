@@ -1007,6 +1007,9 @@ a:focus {
 .bootstrap-datetimepicker-widget {
   z-index: 1100;
 }
+.daterangepicker-holder span {
+  padding: 0px 5px;
+}
 /*
  * Component: Dropdown menus
  * -------------------------
