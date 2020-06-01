@@ -131,6 +131,7 @@
     font-size: 12px;
     margin-bottom: 0.3em;
   }
+
 }
 
 .box,
@@ -241,6 +242,9 @@
 
 //Box Body
 .box-body {
+  hr {
+    border-top: 1px solid @hr-border-box;
+  }
   .border-radius(0; 0; @box-border-radius; @box-border-radius);
   padding: @box-padding;
   .no-header & {

@@ -1953,6 +1953,9 @@ textarea.form-control {
   border-bottom-left-radius: 4px;
   padding: 10px 15px;
 }
+.box-body hr {
+  border-top: 1px solid #eeeeee;
+}
 .no-header .box-body {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
@@ -5243,13 +5246,13 @@ fieldset[disabled] .btn-yahoo.focus {
 .margin-top-none {
   margin-top: 0px;
 }
+.mr-15 {
+  margin-right: 15px;
+}
 .position-bottom {
   position: absolute;
   bottom: 0;
   width: 100%;
-}
-hr {
-  border-top: 1px solid #eee;
 }
 .mr-5 {
   margin-right: 15px;
