@@ -12,6 +12,10 @@
   width: @sidebar-width;
   z-index: 810;
 
+  .sidebar-btn i{
+    display: none
+  } 
+
   // Using disposable variable to join statements with a comma
   @transition-rule: @transition-speed @transition-fn, width @transition-speed @transition-fn;
   .transition-transform(@transition-rule);

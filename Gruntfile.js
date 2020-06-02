@@ -46,7 +46,7 @@ module.exports = function (grunt) { // jshint ignore:line
         },
       },
       html: {
-        files: ['dashboard.html','**/*.css'],
+        files: ['**/*.html','**/*.css'],
         options: {
             livereload: true
         }
@@ -58,7 +58,7 @@ module.exports = function (grunt) { // jshint ignore:line
           middleware: function() {
             return [
               lrSnippet,
-              serveStatic('./', {'index': 'dashboard.html'}),
+              serveStatic('./', {'index': 'index.html'}),
             ];
           }
         }
@@ -210,6 +210,7 @@ module.exports = function (grunt) { // jshint ignore:line
     pug: {
       compile: {
         options: {
+          pretty:true,
           data: {
             debug: true
           }

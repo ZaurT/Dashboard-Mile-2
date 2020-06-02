@@ -474,6 +474,9 @@ a:focus {
   -o-transition: -o-transform 0.3s ease-in-out, width 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
 }
+.main-sidebar .sidebar-btn i {
+  display: none;
+}
 @media (max-width: 767px) {
   .main-sidebar {
     padding-top: 100px;
@@ -681,7 +684,7 @@ a:focus {
   .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu > li:hover > a > span {
     top: 0;
     margin-left: -3px;
-    padding: 12px 5px 12px 20px;
+    padding: 5px 5px 5px 15px;
     background-color: inherit;
   }
   .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container {
@@ -698,6 +701,15 @@ a:focus {
   .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
     top: 44px;
     margin-left: 0;
+  }
+  .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-btn {
+    padding: 10px;
+    font-size: 0;
+    min-width: 0;
+  }
+  .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-btn i {
+    display: block;
+    font-size: 14px;
   }
 }
 .sidebar-expanded-on-hover .main-footer,
@@ -2228,6 +2240,9 @@ textarea.form-control {
 .info-box .info-box-content {
   flex: 1;
   margin-left: 0;
+}
+.info-box .dropdown {
+  display: block !important;
 }
 .info-box-icon {
   border-radius: 4px;
