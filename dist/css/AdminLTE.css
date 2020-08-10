@@ -3357,6 +3357,31 @@ table.dataTable .badge {
   color: #fff;
   border-radius: 5px 5px 0px 0px;
 }
+.modal-primary-header .modal-dialog {
+  border-top: 3px solid #3c8dbc;
+  border-radius: 4px 4px 0px 0px;
+}
+.modal-medium .modal-dialog{
+  width: 394px;
+  max-width: 100%;
+}
+.modal-middle.modal {
+  text-align: center;
+}
+@media screen and (min-width: 768px) { 
+  .modal-middle.modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+.modal-middle .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
 /*
  * Component: Social Widgets
  * -------------------------
